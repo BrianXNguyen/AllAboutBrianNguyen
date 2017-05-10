@@ -22,11 +22,19 @@
       color: red;
         }
     body {
-         
-          background-image: url("http://cdn.mysitemyway.com/etc-mysitemyway/backgrounds/legacy-previews/backgrounds/abstract-cloudy-sky/abstract-cloudy-sky-000385-light-sky-blue.jpg")
-        }
-        p {
-    font-family: "Times New Roman", Georgia, Serif;
+          @keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+         #animate-area	{ 
+	width: 560px; 
+	height: 400px; 
+	background-image: url(bg-clouds.png);
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+
+	animation: animatedBackground 40s linear infinite;
+}
 }
    </style>
      
